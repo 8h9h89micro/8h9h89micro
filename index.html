@@ -5,6 +5,85 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Home - My Website</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      height: 100vh;
+    }
+
+    /* Dark overlay */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 0;
+    }
+
+    nav {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    nav .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    .hero {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -15,9 +94,9 @@
     </ul>
   </nav>
 
-  <main class="container">
+  <section class="hero">
     <h1>Welcome to My Website</h1>
-    <p>This is a simple website hosted for free on GitHub Pages.</p>
-  </main>
+    <p>Creating clean, modern websites — hosted for free on GitHub Pages with a custom domain.</p>
+  </section>
 </body>
 </html>
