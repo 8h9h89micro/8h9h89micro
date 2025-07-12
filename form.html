@@ -1,16 +1,88 @@
-<form action="/signup" method="POST">
-  <h2>Create Your Account</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('images/background.jpg'); /* Update this path if needed */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-  <label for="email">Email Address:</label><br />
-  <input type="email" id="email" name="email" required /><br /><br />
+    .signup-form {
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
 
-  <label for="password">Password:</label><br />
-  <input type="password" id="password" name="password" required /><br /><br />
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-  <label>
-    <input type="checkbox" required />
-    By signing up, you agree to our <a href="/terms" target="_blank">Terms of Service</a> and acknowledge that you may receive essential system-generated emails necessary for the use of your account.
-  </label><br /><br />
+    label {
+      font-weight: bold;
+    }
 
-  <button type="submit">Sign Up</button>
-</form>
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="/signup" method="POST" class="signup-form">
+    <h2>Create Your Account</h2>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+
+    <label>
+      <input type="checkbox" required />
+      By signing up, you agree to our <a href="/terms" target="_blank">Terms of Service</a> and acknowledge that you may receive essential system-generated emails necessary for the use of your account.
+    </label>
+
+    <br /><br />
+    <button type="submit">Sign Up</button>
+  </form>
+
+</body>
+</html>
